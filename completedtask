@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "task": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "notes": { "type": "string" },
+        "due": { "type": "string" },
+        "completed_at": { "type": "string" }
+      },
+      "required": ["title", "completed_at"],
+      "additionalProperties": false
+    },
+    "suggested_slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "purpose": { "type": "string" },
+          "start": { "type": "string" },
+          "end": { "type": "string" }
+        },
+        "required": ["purpose", "start", "end"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["task"],
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "start": { "type": "string", "format": "date-time" },
+          "end": { "type": "string", "format": "date-time" }
+        },
+        "required": ["title", "start", "end"],
+        "additionalProperties": false
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "due": { "type": "string", "format": "date-time" }
+        },
+        "required": ["title"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["events", "tasks"],
+  "additionalProperties": false
+}
